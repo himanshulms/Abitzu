@@ -331,7 +331,7 @@ body {
   &::before,
   &::after {
     position: absolute;
-    // content: "";
+    content: "";
     width: 0%;
     height: 0%;
     opacity: 0;
@@ -355,7 +355,6 @@ body {
   }
 
   &:hover {
-
     &::before,
     &::after {
       width: 100%;
@@ -389,8 +388,8 @@ body {
   }
 
   &.btnSecondary {
-    background-color: $primary-color;
-    border: solid 1px $primary-color;
+    background-color: $button-color;
+    border: solid 1px $button-color;
     color: $white;
 
     &:hover {
@@ -445,6 +444,14 @@ body {
 
   &:focus {
     box-shadow: none;
+  }
+
+  &.no-hover {
+    &:hover {
+      &::before, &::after {
+        content: unset;
+      }
+    }
   }
 
 }
@@ -604,9 +611,9 @@ body {
 }
 
 aside {
-  @media (min-width:768px) {
-    max-height: calc(100vh - 100px);
-  }
+  // @media (min-width:768px) {
+  //   max-height: calc(100vh - 100px);
+  // }
 
   overflow: auto;
 
@@ -748,6 +755,7 @@ textarea{
   .table-responsive {
     overflow: auto;
     min-height: 40px;
+ 
   }
   
 
@@ -766,13 +774,14 @@ textarea{
           background-color: $body-bg-color;
           padding: 9px 12px;
           min-height: 40px;
+          text-wrap: nowrap;
           // min-width: 150px;
           vertical-align: middle;
-          overflow: hidden;
+          // overflow: hidden;
           position: sticky;
           top: 0;
           z-index: 1;
-          text-align: center;
+          // text-align: center;
           &.sticky-col {
             position: -webkit-sticky;
             position: sticky;
@@ -808,7 +817,8 @@ textarea{
           padding: 5px 12px;
           min-height: 40px;
           vertical-align: middle;
-          text-align: center;
+          text-wrap: nowrap;
+          // text-align: center;
           &.sticky-col {
             position: -webkit-sticky;
             position: sticky;
@@ -875,7 +885,7 @@ textarea{
 .table-layout-one {
   .table-responsive {
     @media (min-width:768px) {
-      max-height: calc(100vh - 390px);
+      max-height: calc(100vh - 235px);
     }
 
     overflow: auto;
@@ -939,7 +949,7 @@ footer {
   margin-top: 20px;
   padding: 20px 0 10px;
   position: fixed;
-  width: calc(100% - 290px);
+  width: calc(100% - 60px);
   bottom: 0;
   z-index: 99;
 
@@ -1085,6 +1095,67 @@ footer {
       }
     }
   }
+  &.tab2 {
+    ul {
+      &.nav {
+        &.nav-pills {
+          border: none;
+          border-bottom: 1px solid $secondary-color;
+  
+          @media (max-width: 767px) {
+            background: transparent !important;
+            border: 0;
+            border-radius: 0px !important;
+          }  
+          li {
+            flex: 0 0 160px;
+            margin-right: 5px;  
+            button {
+              min-height: 57px;
+              justify-content: center;
+              padding-left: 0;  
+              border-radius: 12px 12px 0 0;
+              border: none;
+              &::after {
+                content: unset;
+              }  
+              &.active,
+              &:hover {
+                color: $white;
+                background: $secondary-color;  
+                &::before {
+                  content: unset;
+                }
+              }
+            }
+  
+            @media (max-width: 767px) {
+              flex: 100%;
+              max-width: 100%;
+              margin-bottom: 5px;
+              background-color: transparent !important;
+            }
+  
+            &:first-child {
+              button {
+                padding-left: 0;
+              }
+            }
+  
+            &:last-child {
+              button {
+                border-right: 0;
+  
+                @media (max-width: 767px) {
+                  border-right: solid 1px $stroke-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // create-tab-ui end code css
@@ -1101,20 +1172,6 @@ footer {
   }
 }
 
-// right section end code css
-.offcanvas {
-  &.offcanvas-start {
-    &.offcanvas-desktop {
-      @media (min-width: 768px) {
-        border: none;
-        background: transparent;
-        visibility: visible !important;
-        position: relative !important;
-        transform: none !important;
-      }
-    }
-  }
-}
 
 // view package start
 
@@ -1231,6 +1288,10 @@ footer {
 .wh-62 {
   min-width: 62px;min-height: 62px;
   width: 62px;height: 62px;
+}
+.wh-40 {
+  min-width: 40px;min-height: 40px;
+  width: 40px;height: 40px;
 }
 .wh-30 {
   min-width: 30px;min-height: 30px;
@@ -1399,3 +1460,140 @@ footer {
     }
   }
 }
+// *********Sidebar show hover starts here***********
+.icon {
+  font-size: 30px;
+  cursor: pointer;
+  }
+  .sidebar {
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 7px 25px 0px #00000012;
+    top:90px !important;
+}
+/**********Select with search input in table th*********/
+table {
+  thead {
+    tr {
+      th {
+        &.select-input-th {
+          min-width: 200px;
+          max-width: 200px;
+          width: 200px;
+        }
+        &.select-dropdown-th {
+          min-width: 150px;
+          max-width: 150px;
+          width: 150px;
+          .custom-dropdown {
+            a {
+              &::after {
+                position: absolute;
+                left:unset;
+                right: 0;
+                background-image: url(../Images/icons/arrow-down.svg);
+              }
+            }
+          }
+        }
+        .select-input {
+          background-color: transparent;
+          border: 0 !important;
+          .btn {
+            background-color: transparent;
+            border-color: transparent;padding-left: 0;
+            // &.dropdown-toggle {
+            //   background-image: url(../Images/icons/arrow-down.svg);
+            //   background-size: inherit;
+            //   background-repeat: no-repeat;
+            //   width: 100%;
+            //   background-position: right;    background-color: transparent;
+            //   border-color: transparent;
+            // }
+          }
+          .btn:hover::before, .btn:hover::after  {
+            opacity: 0;
+            border:none;
+          }
+          .dropdown-menu.show {
+            min-width: 228px;
+            max-width: 228px;
+            margin-top: 7px !important;
+            padding: 0;
+          }
+        }
+        .bootstrap-select {
+          .dropdown-toggle:focus, select.mobile-device:focus+.dropdown-toggle {
+            outline: unset !important;
+            background-color: transparent;
+            border-color: transparent;
+          }
+          .dropdown-menu {
+            li {
+              border-bottom: 1px solid $stroke-color;
+              padding: 2px;
+              .dropdown-item.active, .dropdown-item:active {
+                background-color: transparent;
+              }
+            }
+            .bs-searchbox {
+              padding: 0;
+              .form-control {
+                box-shadow: none !important;
+                height: 33px !important;
+                border: none !important;
+                border-bottom: 1px solid $stroke-color !important;
+                border-radius: 0px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}
+/**********Common scrollbar**************/
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $body-bg-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondary-color;
+}
+.dropdown {
+  .dropdown-menu {
+    &::before {
+      content: unset;
+    }
+  }
+}
+/**********Dropdown arrow from background image*************/
+.dropdown-toggle {
+  background-image: url(../Images/icons/arrow-down.svg);
+  background-size: inherit;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: right;
+  background-color: transparent;
+  border-color: transparent;
+  &::after {content: unset;}  
+  }
+  .dropdown-item {
+    &:hover, &:active, &.active, &:focus,&:focus-visible {
+      background-color: $body-bg-color;
+    }
+  }
+  .custom-dropdown {
+    .dropdown-menu.show {
+      margin-top: 16px !important;
+      padding: 0;
+    }
+  }

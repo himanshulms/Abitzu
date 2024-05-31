@@ -333,28 +333,65 @@
               
               <h1 class="text-lg tertiary-color font-semibold mb-0">Packages</h1>
             </div>
-            <div class="d-md-flex align-items-center gap-3">
-              <div class="input-group search-input position-relative mb-3 mb-md-0 ">
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Package name"
-                  id="search-input"
-                />
-                <span class="input-group-append">
-                  <button class="search-button border-0 p-0" type="button">
-                    <img
-                      src="./assets/Images/icons/search-ico.svg"
-                      alt="Search"
-                    />
-                  </button>
-                </span>
-              </div>
-              <a href="add-packages.html" class="btn btnPrimary me-2 me-md-0" type="button">Add</a>
+            <div class="d-flex align-items-center gap-3">
               <a href="#" class="btn btnSecondary" type="button">Group of packages</a>
+              <a href="add-packages.html" class="btn btnPrimary" type="button">Add package</a>
             </div>
           </div>
           <div class="card border-0 br-10">
+            <div class="card-header p-4 bg-white border-0">
+              <h2 class="text-lg tertiary-color font-medium mb-2 pb-1">
+                Package list
+              </h2>
+              <div class="row gap-3 gap-md-0">
+                <div class="col-md-5">
+                  <div class="input-group search-input position-relative">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Package name"
+                      id="search-input"
+                    />
+                    <span class="input-group-append">
+                      <button class="search-button border-0 p-0" type="button">
+                        <img
+                          src="./assets/Images/icons/search-ico.svg"
+                          alt="Search"
+                        />
+                      </button>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="row gap-3 gap-md-0">
+                    <div class="col-md-4">
+                      <select class="form-select select-sm" aria-label="Location">
+                        <option selected>Location</option>
+                        <option value="1">Indore</option>
+                        <option value="2">Bhopal</option>
+                        <option value="3">Jabalpur</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <select class="form-select select-sm" aria-label="Location">
+                        <option selected>Type</option>
+                        <option value="1">Hair style</option>
+                        <option value="2">Men hair style</option>
+                        <option value="3">Spa</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <select class="form-select select-sm" aria-label="Location">
+                        <option selected>Status</option>
+                        <option value="1">Pending</option>
+                        <option value="2">Done</option>
+                        <option value="3">In progress</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="card-body bg-white p-0">
               <div class="table-layout-one">
                 <div class="table-responsive">
@@ -362,37 +399,19 @@
                     <thead>
                       <tr>
                         <th>Code</th>
-                        <th class="sticky-col first-col">Name</th>
-                        <th class="select-input-th">
-                          <select name="location" class="form-control selectpicker select-input" id="location" data-live-search="true" data-actions-box="true" tabindex="-98">
-                            <option value="0" selected="selected" class="line-clamp-1">Location</option>
-                            <option value="803" class="line-clamp-1">Bhopal</option>
-                            <option value="803" class="line-clamp-1">Indore</option>
-                            <option value="803" class="line-clamp-1">Dewas</option>
-                            <option value="1341" class="line-clamp-1">Ujjain</option>
-                          </select>
-                        </th>
-                        <th class="select-input-th">
-                          <select name="location" class="form-control selectpicker select-input" id="location" data-live-search="true" data-actions-box="true" tabindex="-98">
-                            <option value="0" selected="selected" class="line-clamp-1">Package type</option>
-                            <option value="803" class="line-clamp-1">Package</option>
-                            <option value="1341" class="line-clamp-1">Group Package</option>
-                          </select>
+                        <th>Name</th>
+                        <!-- <th>Package type</th> -->
+                        <th>
+                          <select name="location" class="form-control selectpicker" id="location" data-live-search="true" data-actions-box="true" tabindex="-98">
+                            <option value="0" selected="selected">Location</option>
+                            <option value="803">Bhopal</option>
+                            <option value="803">Indore</option>
+                            <option value="803">Dewas</option>
+                            <option value="1341">Ujjain</option>
+                            </select>
                         </th>
                         <th>Booking end date</th>
-                        <th class="select-dropdown-th">
-                          <div class="custom-dropdown">
-                            <a class="dropdown-toggle text-decoration-none tertiary-color position-relative d-block" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Active
-                            </a>
-                          
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">All</a></li>
-                              <li><a class="dropdown-item" href="#">Active</a></li>
-                              <li><a class="dropdown-item" href="#">Inactive</a></li>
-                            </ul>
-                          </div>
-                        </th>
+                        <th>Active</th>
                         <th>Remark</th>
                         <th>Action</th>
                       </tr>
@@ -400,11 +419,10 @@
                     <tbody>
                       <tr>
                         <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
+                        <td>Dhimaya package</td>
                         <td>Package</td>
                         <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
+                        <td class="d-flex justify-content-center align-items-center">
                           <div class="checkbox-input">
                             <input
                               class="form-check-input mt-0"
@@ -416,10 +434,10 @@
                         </td>
                         <td>Lorem Ipsum is sim...</td>
                         <td>
-                          <div class="d-flex gap-2">
+                          <div class="d-flex justify-content-center gap-2">
                             <a
                               href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
+                              class="btn btnPrimary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/edit-ico.svg"
@@ -428,7 +446,7 @@
                             </a>
                             <a
                               href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
+                              class="btn btnSecondary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/view-ico.svg"
@@ -440,11 +458,10 @@
                       </tr>
                       <tr>
                         <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
+                        <td>Dhimaya package</td>
                         <td>Package</td>
                         <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
+                        <td class="d-flex justify-content-center">
                           <div class="checkbox-input">
                             <input
                               class="form-check-input mt-0"
@@ -456,10 +473,10 @@
                         </td>
                         <td>Lorem Ipsum is sim...</td>
                         <td>
-                          <div class="d-flex gap-2">
+                          <div class="d-flex justify-content-center gap-2">
                             <a
                               href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
+                              class="btn btnPrimary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/edit-ico.svg"
@@ -468,7 +485,7 @@
                             </a>
                             <a
                               href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
+                              class="btn btnSecondary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/view-ico.svg"
@@ -480,11 +497,10 @@
                       </tr>
                       <tr>
                         <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
+                        <td>Dhimaya package</td>
                         <td>Package</td>
                         <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
+                        <td class="d-flex justify-content-center">
                           <div class="checkbox-input">
                             <input
                               class="form-check-input mt-0"
@@ -496,10 +512,10 @@
                         </td>
                         <td>Lorem Ipsum is sim...</td>
                         <td>
-                          <div class="d-flex gap-2">
+                          <div class="d-flex justify-content-center gap-2">
                             <a
                               href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
+                              class="btn btnPrimary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/edit-ico.svg"
@@ -508,7 +524,7 @@
                             </a>
                             <a
                               href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
+                              class="btn btnSecondary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/view-ico.svg"
@@ -520,11 +536,10 @@
                       </tr>
                       <tr>
                         <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
+                        <td>Dhimaya package</td>
                         <td>Package</td>
                         <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
+                        <td class="d-flex justify-content-center">
                           <div class="checkbox-input">
                             <input
                               class="form-check-input mt-0"
@@ -536,10 +551,10 @@
                         </td>
                         <td>Lorem Ipsum is sim...</td>
                         <td>
-                          <div class="d-flex gap-2">
+                          <div class="d-flex justify-content-center gap-2">
                             <a
                               href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
+                              class="btn btnPrimary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/edit-ico.svg"
@@ -548,7 +563,7 @@
                             </a>
                             <a
                               href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
+                              class="btn btnSecondary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/view-ico.svg"
@@ -560,11 +575,10 @@
                       </tr>
                       <tr>
                         <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
+                        <td>Dhimaya package</td>
                         <td>Package</td>
                         <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
+                        <td class="d-flex justify-content-center">
                           <div class="checkbox-input">
                             <input
                               class="form-check-input mt-0"
@@ -576,10 +590,10 @@
                         </td>
                         <td>Lorem Ipsum is sim...</td>
                         <td>
-                          <div class="d-flex gap-2">
+                          <div class="d-flex justify-content-center gap-2">
                             <a
                               href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
+                              class="btn btnPrimary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/edit-ico.svg"
@@ -588,7 +602,7 @@
                             </a>
                             <a
                               href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
+                              class="btn btnSecondary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/view-ico.svg"
@@ -600,11 +614,10 @@
                       </tr>
                       <tr>
                         <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
+                        <td>Dhimaya package</td>
                         <td>Package</td>
                         <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
+                        <td class="d-flex justify-content-center">
                           <div class="checkbox-input">
                             <input
                               class="form-check-input mt-0"
@@ -616,10 +629,10 @@
                         </td>
                         <td>Lorem Ipsum is sim...</td>
                         <td>
-                          <div class="d-flex gap-2">
+                          <div class="d-flex justify-content-center gap-2">
                             <a
                               href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
+                              class="btn btnPrimary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/edit-ico.svg"
@@ -628,7 +641,7 @@
                             </a>
                             <a
                               href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
+                              class="btn btnSecondary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/view-ico.svg"
@@ -640,11 +653,10 @@
                       </tr>
                       <tr>
                         <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
+                        <td>Dhimaya package</td>
                         <td>Package</td>
                         <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
+                        <td class="d-flex justify-content-center">
                           <div class="checkbox-input">
                             <input
                               class="form-check-input mt-0"
@@ -656,10 +668,10 @@
                         </td>
                         <td>Lorem Ipsum is sim...</td>
                         <td>
-                          <div class="d-flex gap-2">
+                          <div class="d-flex justify-content-center gap-2">
                             <a
                               href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
+                              class="btn btnPrimary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/edit-ico.svg"
@@ -668,7 +680,7 @@
                             </a>
                             <a
                               href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
+                              class="btn btnSecondary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/view-ico.svg"
@@ -680,11 +692,10 @@
                       </tr>
                       <tr>
                         <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
+                        <td>Dhimaya package</td>
                         <td>Package</td>
                         <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
+                        <td class="d-flex justify-content-center">
                           <div class="checkbox-input">
                             <input
                               class="form-check-input mt-0"
@@ -696,10 +707,10 @@
                         </td>
                         <td>Lorem Ipsum is sim...</td>
                         <td>
-                          <div class="d-flex gap-2">
+                          <div class="d-flex justify-content-center gap-2">
                             <a
                               href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
+                              class="btn btnPrimary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/edit-ico.svg"
@@ -708,7 +719,7 @@
                             </a>
                             <a
                               href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
+                              class="btn btnSecondary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/view-ico.svg"
@@ -720,11 +731,10 @@
                       </tr>
                       <tr>
                         <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
+                        <td>Dhimaya package</td>
                         <td>Package</td>
                         <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
+                        <td class="d-flex justify-content-center">
                           <div class="checkbox-input">
                             <input
                               class="form-check-input mt-0"
@@ -736,10 +746,10 @@
                         </td>
                         <td>Lorem Ipsum is sim...</td>
                         <td>
-                          <div class="d-flex gap-2">
+                          <div class="d-flex justify-content-center gap-2">
                             <a
                               href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
+                              class="btn btnPrimary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/edit-ico.svg"
@@ -748,7 +758,7 @@
                             </a>
                             <a
                               href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
+                              class="btn btnSecondary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/view-ico.svg"
@@ -760,11 +770,10 @@
                       </tr>
                       <tr>
                         <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
+                        <td>Dhimaya package</td>
                         <td>Package</td>
                         <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
+                        <td class="d-flex justify-content-center">
                           <div class="checkbox-input">
                             <input
                               class="form-check-input mt-0"
@@ -776,10 +785,10 @@
                         </td>
                         <td>Lorem Ipsum is sim...</td>
                         <td>
-                          <div class="d-flex gap-2">
+                          <div class="d-flex justify-content-center gap-2">
                             <a
                               href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
+                              class="btn btnPrimary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/edit-ico.svg"
@@ -788,7 +797,7 @@
                             </a>
                             <a
                               href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
+                              class="btn btnSecondary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/view-ico.svg"
@@ -800,11 +809,10 @@
                       </tr>
                       <tr>
                         <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
+                        <td>Dhimaya package</td>
                         <td>Package</td>
                         <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
+                        <td class="d-flex justify-content-center">
                           <div class="checkbox-input">
                             <input
                               class="form-check-input mt-0"
@@ -816,10 +824,10 @@
                         </td>
                         <td>Lorem Ipsum is sim...</td>
                         <td>
-                          <div class="d-flex gap-2">
+                          <div class="d-flex justify-content-center gap-2">
                             <a
                               href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
+                              class="btn btnPrimary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/edit-ico.svg"
@@ -828,7 +836,7 @@
                             </a>
                             <a
                               href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
+                              class="btn btnSecondary btnAction"
                             >
                               <img
                                 src="./assets/Images/icons/view-ico.svg"
@@ -838,289 +846,6 @@
                           </div>
                         </td>
                       </tr>
-                      <tr>
-                        <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
-                        <td>Package</td>
-                        <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
-                          <div class="checkbox-input">
-                            <input
-                              class="form-check-input mt-0"
-                              type="checkbox"
-                              value=""
-                              aria-label="Checkbox for following text input"
-                            />
-                          </div>
-                        </td>
-                        <td>Lorem Ipsum is sim...</td>
-                        <td>
-                          <div class="d-flex gap-2">
-                            <a
-                              href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/edit-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                            <a
-                              href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/view-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
-                        <td>Package</td>
-                        <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
-                          <div class="checkbox-input">
-                            <input
-                              class="form-check-input mt-0"
-                              type="checkbox"
-                              value=""
-                              aria-label="Checkbox for following text input"
-                            />
-                          </div>
-                        </td>
-                        <td>Lorem Ipsum is sim...</td>
-                        <td>
-                          <div class="d-flex gap-2">
-                            <a
-                              href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/edit-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                            <a
-                              href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/view-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
-                        <td>Package</td>
-                        <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
-                          <div class="checkbox-input">
-                            <input
-                              class="form-check-input mt-0"
-                              type="checkbox"
-                              value=""
-                              aria-label="Checkbox for following text input"
-                            />
-                          </div>
-                        </td>
-                        <td>Lorem Ipsum is sim...</td>
-                        <td>
-                          <div class="d-flex gap-2">
-                            <a
-                              href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/edit-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                            <a
-                              href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/view-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
-                        <td>Package</td>
-                        <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
-                          <div class="checkbox-input">
-                            <input
-                              class="form-check-input mt-0"
-                              type="checkbox"
-                              value=""
-                              aria-label="Checkbox for following text input"
-                            />
-                          </div>
-                        </td>
-                        <td>Lorem Ipsum is sim...</td>
-                        <td>
-                          <div class="d-flex gap-2">
-                            <a
-                              href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/edit-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                            <a
-                              href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/view-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
-                        <td>Package</td>
-                        <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
-                          <div class="checkbox-input">
-                            <input
-                              class="form-check-input mt-0"
-                              type="checkbox"
-                              value=""
-                              aria-label="Checkbox for following text input"
-                            />
-                          </div>
-                        </td>
-                        <td>Lorem Ipsum is sim...</td>
-                        <td>
-                          <div class="d-flex gap-2">
-                            <a
-                              href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/edit-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                            <a
-                              href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/view-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
-                        <td>Package</td>
-                        <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
-                          <div class="checkbox-input">
-                            <input
-                              class="form-check-input mt-0"
-                              type="checkbox"
-                              value=""
-                              aria-label="Checkbox for following text input"
-                            />
-                          </div>
-                        </td>
-                        <td>Lorem Ipsum is sim...</td>
-                        <td>
-                          <div class="d-flex gap-2">
-                            <a
-                              href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/edit-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                            <a
-                              href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/view-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>#21589</td>
-                        <td class="sticky-col first-col">Dhimaya package</td>
-                        <td>Bhopal</td>
-                        <td>Package</td>
-                        <td>28/02/2024</td>
-                        <td class="d-flex align-items-center">
-                          <div class="checkbox-input">
-                            <input
-                              class="form-check-input mt-0"
-                              type="checkbox"
-                              value=""
-                              aria-label="Checkbox for following text input"
-                            />
-                          </div>
-                        </td>
-                        <td>Lorem Ipsum is sim...</td>
-                        <td>
-                          <div class="d-flex gap-2">
-                            <a
-                              href="edit-packages.html"
-                              class="btn btnPrimary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/edit-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                            <a
-                              href="view-package.html"
-                              class="btn btnSecondary btnAction no-hover"
-                            >
-                              <img
-                                src="./assets/Images/icons/view-ico.svg"
-                                alt="Help"
-                              />
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      
-                    
-                      
                     </tbody>
                   </table>
                 </div>
