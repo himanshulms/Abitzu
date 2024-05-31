@@ -269,69 +269,43 @@ body {
   border-radius: 10px;
   outline: 0 !important;
   position: relative;
-  overflow: hidden;
   transition: background 1s;
 }
-.btn::before, .btn::after {
-  position: absolute;
+.btn::before {
   content: "";
+  position: absolute;
   width: 0%;
-  height: 0%;
-  opacity: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+  opacity: 0.3;
   border-radius: 10px;
 }
-.btn:before {
-  top: 0;
-  right: 0;
-  border-top: 1px solid #ffffff;
-  border-left: 1px solid #ffffff;
-  transition: width 0.2s 0.5s ease-out, height 0.15s 0.35s linear, opacity 0s 0.7s;
-}
-.btn:after {
-  bottom: 0;
-  left: 0px;
-  border-bottom: 1px solid #ffffff;
-  border-right: 1px solid #ffffff;
-  transition: width 0.2s 0.15s linear, height 0.15s ease-in, opacity 0s 0.35s;
-}
-.btn:hover::before, .btn:hover::after {
-  width: 100%;
-  height: 96%;
-  opacity: 1;
-}
 .btn:hover::before {
-  transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s;
-}
-.btn:hover::after {
-  transition: width 0.2s 0.35s linear, height 0.15s 0.5s ease-out, opacity 0s 0.3s;
+  width: 100%;
 }
 .btn.btnPrimary {
   background-color: #50cec3;
   border: solid 1px #50cec3;
   color: #ffffff;
 }
-.btn.btnPrimary:hover {
+.btn.btnPrimary::before {
   background-color: #1e988d;
-  border: solid 1px #1e988d;
 }
 .btn.btnPrimary:active {
-  background-color: #1e988d;
   border: solid 1px #1e988d;
-  color: #ffffff;
 }
 .btn.btnSecondary {
   background-color: #4e5662;
   border: solid 1px #4e5662;
   color: #ffffff;
 }
-.btn.btnSecondary:hover {
+.btn.btnSecondary::before {
   background-color: #2d3748;
-  border: solid 1px #2d3748;
 }
 .btn.btnSecondary:active {
-  background-color: #2d3748;
   border: solid 1px #2d3748;
-  color: #ffffff;
 }
 .btn.btnSmall {
   padding: 3px 6px;
@@ -349,6 +323,9 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  border-radius: 5px;
+}
+.btn.btnAction::before {
   border-radius: 5px;
 }
 .btn.btnAction img {
@@ -373,9 +350,6 @@ body {
 }
 .btn:focus {
   box-shadow: none;
-}
-.btn.no-hover:hover::before, .btn.no-hover:hover::after {
-  content: unset;
 }
 
 .badge {
@@ -1287,6 +1261,11 @@ footer {
   transition: 0.3s ease-in-out;
   box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.0705882353);
   top: 90px !important;
+}
+@media (max-width: 575px) {
+  .sidebar {
+    top: 58.64px !important;
+  }
 }
 
 /**********Select with search input in table th*********/
