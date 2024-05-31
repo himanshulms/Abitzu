@@ -532,6 +532,7 @@ body {
       align-items: center;
       @media (max-width: 1200px) {
         align-items: start;
+        padding:10px;
 
       }
       .nav-item {
@@ -543,6 +544,10 @@ body {
           color: $tertiary-color;
           position: relative;
           padding: 0px;
+          @media (max-width: 1200px) {
+            padding: 5px;
+            &.dropdown-toggle {min-width: 180px;}
+          }
           &::before{
             content: "";
             position: absolute;
@@ -552,6 +557,9 @@ body {
             margin: auto;
             inset: auto 0 -7px 0;
             transition: all 0.3s;
+            @media (max-width: 1200px) {
+              inset: auto 0 4px 0;
+            }
           }
           &:hover{
             &::before{
