@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.border-color {
+  color: #E5E5E5;
+}
+
 .primary-color {
   color: #818c9f;
 }
@@ -269,55 +273,18 @@ body {
   border-radius: 10px;
   outline: 0 !important;
   position: relative;
-  overflow: hidden;
   transition: background 1s;
-}
-.btn::before, .btn::after {
-  position: absolute;
-  content: "";
-  width: 0%;
-  height: 0%;
-  opacity: 0;
-  border-radius: 10px;
-}
-.btn:before {
-  top: 0;
-  right: 0;
-  border-top: 1px solid #ffffff;
-  border-left: 1px solid #ffffff;
-  transition: width 0.2s 0.5s ease-out, height 0.15s 0.35s linear, opacity 0s 0.7s;
-}
-.btn:after {
-  bottom: 0;
-  left: 0px;
-  border-bottom: 1px solid #ffffff;
-  border-right: 1px solid #ffffff;
-  transition: width 0.2s 0.15s linear, height 0.15s ease-in, opacity 0s 0.35s;
-}
-.btn:hover::before, .btn:hover::after {
-  width: 100%;
-  height: 96%;
-  opacity: 1;
-}
-.btn:hover::before {
-  transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s;
-}
-.btn:hover::after {
-  transition: width 0.2s 0.35s linear, height 0.15s 0.5s ease-out, opacity 0s 0.3s;
 }
 .btn.btnPrimary {
   background-color: #50cec3;
   border: solid 1px #50cec3;
   color: #ffffff;
 }
-.btn.btnPrimary:hover {
-  background-color: #1e988d;
-  border: solid 1px #1e988d;
+.btn.btnPrimary::before {
+  background-color: #2d3748;
 }
-.btn.btnPrimary:active {
-  background-color: #1e988d;
+.btn.btnPrimary.active, .btn.btnPrimary:active {
   border: solid 1px #1e988d;
-  color: #ffffff;
 }
 .btn.btnSecondary {
   background-color: #4e5662;
@@ -349,6 +316,9 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  border-radius: 5px;
+}
+.btn.btnAction::before {
   border-radius: 5px;
 }
 .btn.btnAction img {
@@ -400,7 +370,7 @@ body {
 @media (max-width: 1199px) {
   .navbar-collapse {
     position: absolute;
-    top: 80px;
+    top: 57px;
     background: white;
     width: 100%;
     left: 0;
@@ -448,6 +418,11 @@ body {
     min-width: 180px;
   }
 }
+@media (max-width: 575px) {
+  .top-header .navbar .navbar-nav .nav-item .nav-link {
+    min-width: 100px;
+  }
+}
 .top-header .navbar .navbar-nav .nav-item .nav-link::before {
   content: "";
   position: absolute;
@@ -461,10 +436,16 @@ body {
 @media (max-width: 1200px) {
   .top-header .navbar .navbar-nav .nav-item .nav-link::before {
     inset: auto 0 4px 0;
+    content: unset;
   }
 }
 .top-header .navbar .navbar-nav .nav-item .nav-link:hover::before {
   width: 100%;
+}
+@media (max-width: 575px) {
+  .top-header .navbar .navbar-nav .nav-item {
+    width: 100%;
+  }
 }
 
 .dropdown {
@@ -542,10 +523,6 @@ aside {
 aside::-webkit-scrollbar {
   width: 0;
 }
-aside ul.nav-pills li.nav-item {
-  padding: 0 10px;
-  padding-bottom: 10px;
-}
 aside ul.nav-pills li.nav-item a.nav-link {
   display: flex;
   align-items: center;
@@ -553,8 +530,9 @@ aside ul.nav-pills li.nav-item a.nav-link {
   font-weight: 500;
   color: #818c9f;
   line-height: initial;
-  padding: 12px 12px;
+  padding: 12px;
   gap: 12px;
+  margin: 6px 12px;
 }
 aside ul.nav-pills li.nav-item a.nav-link span.user-icons {
   background-color: white;
@@ -577,6 +555,11 @@ aside ul.nav-pills li.nav-item:hover a.nav-link {
 
 .search-input {
   max-width: 302px;
+}
+@media (max-width: 767px) {
+  .search-input {
+    max-width: 100%;
+  }
 }
 .search-input .form-control {
   box-shadow: none !important;
@@ -661,18 +644,25 @@ textarea.form-control {
 .table-layout-one table {
   margin-bottom: 0;
 }
+.table-layout-one table thead tr {
+  border-top: 1px solid #e5e5e5;
+}
 .table-layout-one table thead tr th {
   font-size: 0.875rem;
   font-weight: 500;
   color: #2d3748;
-  background-color: #f8f9fa;
-  padding: 9px 12px;
+  background-color: #FAF9F9;
+  padding: 8.5px 12px;
   min-height: 40px;
   text-wrap: nowrap;
   vertical-align: middle;
   position: sticky;
   top: 0;
   z-index: 1;
+  white-space: nowrap;
+}
+.table-layout-one table thead tr th button {
+  padding: 0 0;
 }
 .table-layout-one table thead tr th.sticky-col {
   position: sticky;
@@ -1134,11 +1124,6 @@ footer {
 }
 
 /*********Login page starts here***********/
-@media (max-width: 767px) {
-  .login-form form .search-input {
-    max-width: 100%;
-  }
-}
 .login-form form .forgot-pass {
   right: 5px;
   bottom: -22px;
@@ -1303,6 +1288,11 @@ footer {
   top: 90px !important;
   background-color: #f8f9fa;
 }
+@media (max-width: 1199px) {
+  .sidebar {
+    top: 56px !important;
+  }
+}
 
 /**********Select with search input in table th*********/
 table thead tr th.select-input-th {
@@ -1408,4 +1398,14 @@ table thead tr th .bootstrap-select .dropdown-menu .bs-searchbox .form-control {
   padding: 0;
 }
 
-/***************Button hover animation**************//*# sourceMappingURL=style.css.map */
+/***************Button hover animation**************/
+button.navbar-toggler {
+  border: solid 1px #e7e7e7;
+}
+
+@media (max-width: 575px) {
+  .mobile-btns .btnPrimary, .mobile-btns .btnSecondary {
+    width: 100%;
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */

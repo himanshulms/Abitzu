@@ -16,7 +16,12 @@ $white: #ffffff;
 $danger-color: #C22525;
 $dark-black: #010100;
 $light-gray: #F1F1F1;
+$border-color: #E5E5E5;
 
+
+.border-color {
+  color: $border-color;
+}
 .primary-color {
   color: $primary-color;
 }
@@ -325,65 +330,69 @@ body {
   border-radius: 10px;
   outline: 0 !important;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   transition: background 1s;
 
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    width: 0%;
-    height: 0%;
-    opacity: 0;
-    border-radius: 10px;
-  }
+  // &::before,
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   width: 0%;
+  //   height: 0%;
+  //   opacity: 0;
+  //   border-radius: 10px;
+  // }
 
-  &:before {
-    top: 0;
-    right: 0;
-    border-top: 1px solid $white;
-    border-left: 1px solid $white;
-    transition: width 0.2s 0.5s ease-out, height 0.15s 0.35s linear, opacity 0s 0.7s;
-  }
+  // &:before {
+  //   top: 0;
+  //   right: 0;
+  //   border-top: 1px solid $white;
+  //   border-left: 1px solid $white;
+  //   transition: width 0.2s 0.5s ease-out, height 0.15s 0.35s linear, opacity 0s 0.7s;
+  // }
 
-  &:after {
-    bottom: 0;
-    left: 0px;
-    border-bottom: 1px solid $white;
-    border-right: 1px solid $white;
-    transition: width 0.2s 0.15s linear, height 0.15s ease-in, opacity 0s 0.35s;
-  }
+  // &:after {
+  //   bottom: 0;
+  //   left: 0px;
+  //   border-bottom: 1px solid $white;
+  //   border-right: 1px solid $white;
+  //   transition: width 0.2s 0.15s linear, height 0.15s ease-in, opacity 0s 0.35s;
+  // }
 
-  &:hover {
-    &::before,
-    &::after {
-      width: 100%;
-      height: 96%;
-      opacity: 1;
-    }
+  // &:hover {
+  //   &::before,
+  //   &::after {
+  //     width: 100%;
+  //     height: 96%;
+  //     opacity: 1;
+  //   }
 
-    &::before {
-      transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s;
-    }
+  //   &::before {
+  //     transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s;
+  //   }
 
-    &::after {
-      transition: width 0.2s 0.35s linear, height 0.15s 0.5s ease-out, opacity 0s 0.3s;
-    }
-  }
+  //   &::after {
+  //     transition: width 0.2s 0.35s linear, height 0.15s 0.5s ease-out, opacity 0s 0.3s;
+  //   }
+  // }
 
   &.btnPrimary {
     background-color: $secondary-color;
     border: solid 1px $secondary-color;
     color: $white;
 
-    &:hover {
-      background-color: $button-hover-primary;
-      border: solid 1px $button-hover-primary;
+
+    // &:hover {
+    //   background-color: $button-hover-primary;
+    //   border: solid 1px $button-hover-primary;
+    // }
+    &::before{
+      background-color: $tertiary-color;
     }
-    &:active{
-      background-color: $button-hover-primary;
+    &.active, &:active{
+      // background-color: $button-hover-primary;
       border: solid 1px $button-hover-primary;
-      color: $white;
+      // color: $white;
     }
   }
 
@@ -419,6 +428,9 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    &::before{
+      border-radius: 5px;
+    }
     img{
       width: 18px;
     }
@@ -481,7 +493,7 @@ body {
 .navbar-collapse {
   @media (max-width: 1199px) {
     position: absolute;
-    top: 80px;
+    top: 57px;
     background: white;
     width: 100%;
     left: 0;
@@ -521,7 +533,13 @@ body {
           padding: 0px;
           @media (max-width: 1200px) {
             padding: 5px;
-            &.dropdown-toggle {min-width: 180px;}
+            &.dropdown-toggle {
+              min-width: 180px;
+            }
+          }
+         
+          @media (max-width: 575px) {
+            min-width: 100px;
           }
           &::before{
             content: "";
@@ -534,6 +552,7 @@ body {
             transition: all 0.3s;
             @media (max-width: 1200px) {
               inset: auto 0 4px 0;
+              content: unset;
             }
           }
           &:hover{
@@ -541,6 +560,9 @@ body {
               width: 100%;
             }
           }
+        }
+        @media (max-width: 575px) {
+         width: 100%;   
         }
       }
     }
@@ -638,8 +660,8 @@ aside {
     &.nav-pills {
       li {
         &.nav-item {
-          padding: 0 10px;
-          padding-bottom: 10px;
+          // padding: 0 10px;
+          // padding-bottom: 10px;
 
           a {
             &.nav-link {
@@ -649,8 +671,9 @@ aside {
               font-weight: $font-medium;
               color: $primary-color;
               line-height: initial;
-              padding: 12px 12px;
+              padding: 12px;
               gap: 12px;
+              margin:6px 12px;
 
               span {
                 &.user-icons {
@@ -689,7 +712,8 @@ aside {
 
 .search-input {
   max-width: 302px;
-
+  @media (max-width:767px) {
+    max-width: 100%;}
   .form-control {
     box-shadow: none !important;
     border-radius: 10px !important;
@@ -719,7 +743,6 @@ aside {
       }
     }
   }
-  
 }
 
 .form-control {
@@ -778,13 +801,15 @@ textarea{
       tr {
         // border-left: 1px solid $white;
         // border-right: 1px solid $white;
+        border-top: 1px solid #e5e5e5;
 
         th {
           font-size: $text-sm;
           font-weight: $font-medium;
           color: $tertiary-color;
-          background-color: $body-bg-color;
-          padding: 9px 12px;
+          background-color: #FAF9F9;
+
+          padding: 8.5px 12px;
           min-height: 40px;
           text-wrap: nowrap;
           // min-width: 150px;
@@ -794,6 +819,10 @@ textarea{
           top: 0;
           z-index: 1;
           // text-align: center;
+          white-space: nowrap;
+          button {
+            padding: 0 0
+          }
           &.sticky-col {
             position: -webkit-sticky;
             position: sticky;
@@ -1323,10 +1352,6 @@ footer {
  /*********Login page starts here***********/
 .login-form {
   form {
-    .search-input {
-      @media (max-width:767px) {
-      max-width: 100%;}
-    }
     .forgot-pass {
       right: 5px;
       bottom: -22px;
@@ -1482,7 +1507,11 @@ footer {
   .sidebar {
     transition: 0.3s ease-in-out;
     box-shadow: 0px 7px 25px 0px #00000012;
-    top:90px !important;background-color: $body-bg-color;
+    top:90px !important;
+    background-color: $body-bg-color;
+    @media (max-width:1199px) {
+      top: 56px !important;
+    }
 }
 /**********Select with search input in table th*********/
 table {
@@ -1611,6 +1640,16 @@ table {
       padding: 0;
     }
   }
-
-
   /***************Button hover animation**************/
+button.navbar-toggler {
+  border: solid 1px $stroke-color;
+}
+.mobile-btns {
+  @media (max-width: 575px) {
+    .btnPrimary, .btnSecondary {
+      width: 100%;
+      display: block;
+    }
+
+  }
+}
