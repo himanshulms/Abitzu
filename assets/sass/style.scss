@@ -500,11 +500,15 @@ body {
   position: sticky;
   top: 0px;
   background: $body-bg-color;
-  z-index: 10;
+  z-index: 11;
 
   .navbar {
     .navbar-nav {
       align-items: center;
+      @media (max-width: 1200px) {
+        align-items: start;
+
+      }
       .nav-item {
           padding-left: 11px;
           padding-right: 11px;
@@ -785,7 +789,7 @@ textarea{
           &.sticky-col {
             position: -webkit-sticky;
             position: sticky;
-            z-index: 100;
+            z-index: 9;
           }
           &.first-col {
             width: 150px;
@@ -822,7 +826,7 @@ textarea{
           &.sticky-col {
             position: -webkit-sticky;
             position: sticky;
-            z-index: 10;
+            z-index: 8;
           }
           &.first-col {
             width: 150px;
@@ -885,7 +889,7 @@ textarea{
 .table-layout-one {
   .table-responsive {
     @media (min-width:768px) {
-      max-height: calc(100vh - 235px);
+      max-height: calc(100vh - 265px);
     }
 
     overflow: auto;
@@ -918,7 +922,7 @@ ul {
       a {
         font-size: $text-xs;
         font-weight: $font-medium;
-        color: $tertiary-color !important;
+        color: $footer-text-color;
         text-decoration: none;
 
         &:after {
@@ -928,8 +932,8 @@ ul {
           height: 70%;
           top: 4px;
           left: auto;
-          right: -13px;
-          background-color: $tertiary-color;
+          right: -9px;
+          background-color: $footer-text-color;
         }
       }
 
@@ -947,11 +951,13 @@ ul {
 footer {
   background: $body-bg-color;
   margin-top: 20px;
-  padding: 20px 0 10px;
+  padding: 20px 24px;
   position: fixed;
-  width: calc(100% - 60px);
+  width: 100%;
   bottom: 0;
   z-index: 99;
+  left:0;
+  right:0;
 
   @media(max-width: 767px) {
     width: 100%;
@@ -1597,3 +1603,6 @@ table {
       padding: 0;
     }
   }
+
+
+  /***************Button hover animation**************/
