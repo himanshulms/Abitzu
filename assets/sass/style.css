@@ -426,6 +426,7 @@ body {
 @media (max-width: 1200px) {
   .top-header .navbar .navbar-nav {
     align-items: start;
+    padding: 10px;
   }
 }
 .top-header .navbar .navbar-nav .nav-item {
@@ -439,6 +440,14 @@ body {
   position: relative;
   padding: 0px;
 }
+@media (max-width: 1200px) {
+  .top-header .navbar .navbar-nav .nav-item .nav-link {
+    padding: 5px;
+  }
+  .top-header .navbar .navbar-nav .nav-item .nav-link.dropdown-toggle {
+    min-width: 180px;
+  }
+}
 .top-header .navbar .navbar-nav .nav-item .nav-link::before {
   content: "";
   position: absolute;
@@ -448,6 +457,11 @@ body {
   margin: auto;
   inset: auto 0 -7px 0;
   transition: all 0.3s;
+}
+@media (max-width: 1200px) {
+  .top-header .navbar .navbar-nav .nav-item .nav-link::before {
+    inset: auto 0 4px 0;
+  }
 }
 .top-header .navbar .navbar-nav .nav-item .nav-link:hover::before {
   width: 100%;
@@ -1287,6 +1301,7 @@ footer {
   transition: 0.3s ease-in-out;
   box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.0705882353);
   top: 90px !important;
+  background-color: #f8f9fa;
 }
 
 /**********Select with search input in table th*********/
