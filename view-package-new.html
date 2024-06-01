@@ -1,117 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Abitzu | Package</title>
+    <!-- font -->
+    <link href="./assets/fonts/poppins.css" rel="stylesheet" />
+    <!-- bootstrap -->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- owl -->
+    <link rel="stylesheet" href="./assets/css/owlcarousel.css">
+    <link rel="stylesheet" href="./assets/css/owlthemedefault.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/sass/style.css" />
+     <!-- Bootstrap Select CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css">
+    </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Abitzu | View Packages</title>
-  <!-- font -->
-  <link href="assets/fonts/poppins.css" rel="stylesheet" />
-  <!-- bootstrap -->
-  <link href="assets/css/bootstrap.css" rel="stylesheet" />
-  <!-- owl -->
-  <link rel="stylesheet" href="assets/css/owlcarousel.css">
-  <link rel="stylesheet" href="assets/css/owlthemedefault.css">
-  <!-- styles -->
-  <link rel="stylesheet" href="./assets/sass/style.css" />
-</head>
-
-<body>
-  <!-- top header start code -->
-  <header class="top-header">
-    <div class="container-fluid px-0">
-      <nav class="navbar navbar-expand-xl p-4">
-        <a class="navbar-brand" href="index.html">
-          <img src="./assets/Images/logo.svg" alt="Logo" title="Welcome to Abitzu" />
-        </a>
-
-        <!-- <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
-          aria-controls="offcanvasExample" aria-expanded="false" class="d-md-none navbar-toggler">
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
-
-        <button class="navbar-toggler btn btnPrimary" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Calendar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Clients</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reports</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Retention</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Inventory</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sales</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Account
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Another action</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Info
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Another action</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="mt-3 mt-xl-0">
-              <form class="d-flex gap-3 ms-2" role="search">
-                <a class="btn btnPrimary">
-                  <img src="./assets/Images/icons/Help.svg" alt="Help" />
-                </a>
-                <a href="tel:880908980 98" class="btn btnPrimary">
-                  <img src="./assets/Images/icons/call.svg" alt="Call" />
-                </a>
-              </form>
-            </li>
-          </ul>
-
-        </div>
-      </nav>
-    </div>
-  </header>
-  <!-- top header end code -->
-  <main>
-
-    <div class="d-flex gap-xl-4">
-      <!-- sidebar start code -->
-      <aside class="d-flex flex-column pt-md-3 w-220 offcanvas offcanvas-start offcanvas-desktop sidebar border-0" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
-        <!-- <div class="offcanvas-header d-md-none1 position-sticky top-0 bg-white">
+  <body>
+    <!-- top header start code -->
+    <header class="top-header">
+      <div class="container-fluid px-0">
+        <nav class="navbar navbar-expand-xl p-2 px-4 p-xl-4">
           <a class="navbar-brand" href="index.html">
             <img
               src="./assets/Images/logo.svg"
@@ -119,174 +29,287 @@
               title="Welcome to Abitzu"
             />
           </a>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div> -->
-        <div class="offcanvas-body-wrapper">
-          <ul class="nav nav-pills flex-column mb-auto ">
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Business detail
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                My website
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Location
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Services
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Products
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="packages.html" class="nav-link actives">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Packages
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Custom package
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Service combo
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Pre-paid card
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Gift card
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Products
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Membership
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Taxes
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Jobs
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Staff
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <span class="user-icons"
-                  ><img
-                    src="./assets/Images/icons/business-ico.svg"
-                    alt="Icon"
-                /></span>
-                Salary
-              </a>
-            </li>
-          </ul>
-        </div>
-      </aside>
-      <!-- sidebar end code -->
+
+          <!-- <button 
+            type="button" 
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#sidebar" 
+            aria-controls="sidebar"  
+            aria-expanded="false"
+            class="d-md-none navbar-toggler"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Dashboard</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Calendar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Clients</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Reports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Retention</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inventory</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sales</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle pe-3 no-border"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Account
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle pe-3 no-border"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Info
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mt-3 mt-xl-0">
+                <form class="d-flex gap-3 ms-2" role="search">
+                  <a class="btn btnPrimary">
+                    <img
+                      src="./assets/Images/icons/Help.svg"
+                      alt="Help"
+                    />
+                  </a>
+                  <a href="tel:880908980 98" class="btn btnPrimary">
+                    <img
+                      src="./assets/Images/icons/call.svg"
+                      alt="Call"
+                    />
+                  </a>
+                </form>
+              </li>
+            </ul>
+           
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- top header end code -->
+    <main>
+      <div class="d-flex gap-xl-4">
+        <!-- sidebar start code -->
+        <aside class="d-flex flex-column pt-md-3 w-220 offcanvas offcanvas-start offcanvas-desktop sidebar border-0" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+          <div class="offcanvas-body-wrapper">
+            <ul class="nav nav-pills flex-column mb-auto ">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Business detail
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  My website
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Location
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Services
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Products
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="packages.html" class="nav-link actives">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Packages
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Custom package
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Service combo
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Pre-paid card
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Gift card
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Products
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Membership
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Taxes
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Jobs
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Staff
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="user-icons"
+                    ><img
+                      src="./assets/Images/icons/business-ico.svg"
+                      alt="Icon"
+                  /></span>
+                  Salary
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
       <!-- right-section-wrapper start code -->
       <section class="right-section-wrapper w-100 p-4 packages-deails">
         <!-- main body start -->
@@ -332,7 +355,7 @@
               </button>
             </li>
           </ul>
-          <div class="tab-content" id="pills-tabContent">
+          <div class="tab-content tab2-inner" id="pills-tabContent">
             <!-- tab 1 start -->
             <div class="tab-pane fade show active" id="pills-information" role="tabpanel"
               aria-labelledby="pills-information-tab">
@@ -390,7 +413,7 @@
             <!-- tab 1 end -->
             <!-- tab 2 start -->
             <div class="tab-pane fade" id="pills-services" role="tabpanel" aria-labelledby="pills-services-tab">
-              <div class="card border-0 br-10 overflow-hidden">
+              <div class="card border-0 overflow-hidden">
                 <div class="card border-0">
                   <div class="mb-4 bg-white"></div>
                   <div class="table-layout-one">
@@ -407,7 +430,61 @@
                         <tbody>
                           <tr>
                             <td class=" sticky-col first-col">Massage</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa placeat ipsa ducimus, provident deserunt corporis fugiat harum eligendi quisquam excepturi quod consequuntur molestias dolorem laudantium inventore nisi dignissimos alias quo.</td>
+                            <td>Lorem ipsum dolor</td>
+                            <td>Body massage</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Massage</td>
+                            <td>Body massage</td>
+                            <td>Body massage</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Massage</td>
+                            <td>Body massage</td>
+                            <td>Body massage</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Massage</td>
+                            <td>Body massage</td>
+                            <td>Body massage</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Massage</td>
+                            <td>Body massage</td>
+                            <td>Body massage</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Massage</td>
+                            <td>Body massage</td>
+                            <td>Body massage</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Massage</td>
+                            <td>Body massage</td>
+                            <td>Body massage</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Massage</td>
+                            <td>Body massage</td>
+                            <td>Body massage</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Massage</td>
+                            <td>Body massage</td>
+                            <td>Body massage</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Massage</td>
+                            <td>Body massage</td>
                             <td>Body massage</td>
                             <td class="text-end">5</td>
                           </tr>
@@ -476,7 +553,7 @@
             <!-- tab 2 end -->
             <!-- tab 3 start -->
             <div class="tab-pane fade" id="pills-products" role="tabpanel" aria-labelledby="pills-products-tab">
-              <div class="card border-0 br-10 overflow-hidden">
+              <div class="card border-0 overflow-hidden">
                 <div class="card border-0">
                   <div class="mb-4 bg-white"></div>
                   <div class="table-layout-one">
@@ -484,7 +561,7 @@
                       <table class="table">
                         <thead>
                           <tr>
-                            <th class="min-width-150 sticky-col first-col">Category</th>
+                            <th class="min-width-150">Category</th>
                             <th class="min-width-150">Sub-Category</th>
                             <th class="min-width-150">Product Name</th>
                             <th class="min-width-170 text-end">Product Quantity</th>
@@ -492,13 +569,79 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td class=" sticky-col first-col">Auto consumption category </td>
+                            <td>Auto consumption category </td>
                             <td>Body massage</td>
                             <td>Product 200 A3</td>
                             <td class="text-end">5</td>
-                          </tr>     
+                          </tr>
                           <tr>
-                            <td class=" sticky-col first-col">Auto consumption category </td>
+                            <td>Auto consumption category </td>
+                            <td>Body massage</td>
+                            <td>Product 200 A3</td>
+                            <td class="text-end">5</td>
+                          </tr> 
+                          <tr>
+                            <td>Auto consumption category </td>
+                            <td>Body massage</td>
+                            <td>Product 200 A3</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td>Auto consumption category </td>
+                            <td>Body massage</td>
+                            <td>Product 200 A3</td>
+                            <td class="text-end">5</td>
+                          </tr> 
+                          <tr>
+                            <td>Auto consumption category </td>
+                            <td>Body massage</td>
+                            <td>Product 200 A3</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td>Auto consumption category </td>
+                            <td>Body massage</td>
+                            <td>Product 200 A3</td>
+                            <td class="text-end">5</td>
+                          </tr> 
+                          <tr>
+                            <td>Auto consumption category </td>
+                            <td>Body massage</td>
+                            <td>Product 200 A3</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td>Auto consumption category </td>
+                            <td>Body massage</td>
+                            <td>Product 200 A3</td>
+                            <td class="text-end">5</td>
+                          </tr> 
+                          <tr>
+                            <td>Auto consumption category </td>
+                            <td>Body massage</td>
+                            <td>Product 200 A3</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td>Auto consumption category </td>
+                            <td>Body massage</td>
+                            <td>Product 200 A3</td>
+                            <td class="text-end">5</td>
+                          </tr> 
+                          <tr>
+                            <td>Auto consumption category </td>
+                            <td>Body massage</td>
+                            <td>Product 200 A3</td>
+                            <td class="text-end">5</td>
+                          </tr>
+                          <tr>
+                            <td>Auto consumption category </td>
+                            <td>Body massage</td>
+                            <td>Product 200 A3</td>
+                            <td class="text-end">5</td>
+                          </tr>  
+                          <tr>
+                            <td class="">Auto consumption category </td>
                             <td>Body massage</td>
                             <td>Product 200 A3</td>
                             <td class="text-end">5</td>
@@ -526,7 +669,7 @@
             <!-- tab 3 end -->
             <!-- tab 4 start -->
             <div class="tab-pane fade" id="pills-Centers" role="tabpanel" aria-labelledby="pills-Centers-tab">
-              <div class="card border-0 br-10 overflow-hidden">
+              <div class="card border-0 overflow-hidden">
                 <div class="card border-0">
                   <div class="mb-4 bg-white"></div>
                   <div class="table-layout-one">
@@ -535,9 +678,9 @@
                         <thead>
                           <tr>
                             <th class="min-width-150 sticky-col first-col">Centre Name</th>
-                            <th class="min-width-150 text-nowrap">Actual Price Without Tax</th>
+                            <th class="min-max-width-195 text-nowrap">Actual Price Without Tax</th>
                             <th class="min-width-150">Remark</th>
-                            <th class="min-width-170 text-end text-nowrap">Actual Price With Tax</th>
+                            <th class="min-max-width-195 text-end text-nowrap">Actual Price With Tax</th>
                             <th class="min-width-170 text-end text-nowrap">Price Without Tax</th>
                             <th class="min-width-170 text-end">Price With Tax</th>
                             <th class="min-width-170 text-end">Discount</th>
@@ -548,7 +691,151 @@
                           <tr>
                             <td class=" sticky-col first-col">Abc Prepaid </td>
                             <td class="text-end">156590.00</td>
+                            <td>Lorem ipsum dolor sit a</td>
+                            <td class="text-end">156590.00</td>
+                            <td class="text-end">156580.00</td>
+                            <td  class="text-end">156580.00</td>
+                            <td  class="text-end">10</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                          </tr> 
+                          <tr>
+                            <td class=" sticky-col first-col">Abc Prepaid </td>
+                            <td class="text-end">156590.00</td>
                             <td></td>
+                            <td class="text-end">156590.00</td>
+                            <td class="text-end">156580.00</td>
+                            <td  class="text-end">156580.00</td>
+                            <td  class="text-end">10</td>
+                            <td>
+                              <span class="badge badge-warning">Inactive</span>
+                            </td>
+                          </tr> 
+                          <tr>
+                            <td class=" sticky-col first-col">Abc Prepaid </td>
+                            <td class="text-end">156590.00</td>
+                            <td>Lorem ipsum dolor sit a</td>
+                            <td class="text-end">156590.00</td>
+                            <td class="text-end">156580.00</td>
+                            <td  class="text-end">156580.00</td>
+                            <td  class="text-end">10</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                          </tr> 
+                          <tr>
+                            <td class=" sticky-col first-col">Abc Prepaid </td>
+                            <td class="text-end">156590.00</td>
+                            <td></td>
+                            <td class="text-end">156590.00</td>
+                            <td class="text-end">156580.00</td>
+                            <td  class="text-end">156580.00</td>
+                            <td  class="text-end">10</td>
+                            <td>
+                              <span class="badge badge-warning">Inactive</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Abc Prepaid </td>
+                            <td class="text-end">156590.00</td>
+                            <td>Lorem ipsum dolor sit a</td>
+                            <td class="text-end">156590.00</td>
+                            <td class="text-end">156580.00</td>
+                            <td  class="text-end">156580.00</td>
+                            <td  class="text-end">10</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                          </tr> 
+                          <tr>
+                            <td class=" sticky-col first-col">Abc Prepaid </td>
+                            <td class="text-end">156590.00</td>
+                            <td></td>
+                            <td class="text-end">156590.00</td>
+                            <td class="text-end">156580.00</td>
+                            <td  class="text-end">156580.00</td>
+                            <td  class="text-end">10</td>
+                            <td>
+                              <span class="badge badge-warning">Inactive</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Abc Prepaid </td>
+                            <td class="text-end">156590.00</td>
+                            <td>Lorem ipsum dolor sit a</td>
+                            <td class="text-end">156590.00</td>
+                            <td class="text-end">156580.00</td>
+                            <td  class="text-end">156580.00</td>
+                            <td  class="text-end">10</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                          </tr> 
+                          <tr>
+                            <td class=" sticky-col first-col">Abc Prepaid </td>
+                            <td class="text-end">156590.00</td>
+                            <td></td>
+                            <td class="text-end">156590.00</td>
+                            <td class="text-end">156580.00</td>
+                            <td  class="text-end">156580.00</td>
+                            <td  class="text-end">10</td>
+                            <td>
+                              <span class="badge badge-warning">Inactive</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Abc Prepaid </td>
+                            <td class="text-end">156590.00</td>
+                            <td>Lorem ipsum dolor sit a</td>
+                            <td class="text-end">156590.00</td>
+                            <td class="text-end">156580.00</td>
+                            <td  class="text-end">156580.00</td>
+                            <td  class="text-end">10</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                          </tr> 
+                          <tr>
+                            <td class=" sticky-col first-col">Abc Prepaid </td>
+                            <td class="text-end">156590.00</td>
+                            <td></td>
+                            <td class="text-end">156590.00</td>
+                            <td class="text-end">156580.00</td>
+                            <td  class="text-end">156580.00</td>
+                            <td  class="text-end">10</td>
+                            <td>
+                              <span class="badge badge-warning">Inactive</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Abc Prepaid </td>
+                            <td class="text-end">156590.00</td>
+                            <td>Lorem ipsum dolor sit a</td>
+                            <td class="text-end">156590.00</td>
+                            <td class="text-end">156580.00</td>
+                            <td  class="text-end">156580.00</td>
+                            <td  class="text-end">10</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                          </tr> 
+                          <tr>
+                            <td class=" sticky-col first-col">Abc Prepaid </td>
+                            <td class="text-end">156590.00</td>
+                            <td></td>
+                            <td class="text-end">156590.00</td>
+                            <td class="text-end">156580.00</td>
+                            <td  class="text-end">156580.00</td>
+                            <td  class="text-end">10</td>
+                            <td>
+                              <span class="badge badge-warning">Inactive</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class=" sticky-col first-col">Abc Prepaid </td>
+                            <td class="text-end">156590.00</td>
+                            <td>Lorem ipsum dolor sit a</td>
                             <td class="text-end">156590.00</td>
                             <td class="text-end">156580.00</td>
                             <td  class="text-end">156580.00</td>
@@ -569,9 +856,6 @@
                               <span class="badge badge-warning">Inactive</span>
                             </td>
                           </tr>     
-                             
-                                       
-                          
                         </tbody>
                       </table>
                     </div>
@@ -587,29 +871,28 @@
         </div>
 
         <!-- main body end -->
-        <!-- footer start code -->
-        <footer class="border-top">
-          <div class="row">
-            <div class="col-md-6">
-              <p class="tertiary-color text-xs mb-2 font-medium">©2024. All rights reserved.</p>
-            </div>
-            <div class="col-md-6">
-              <ul
-                class="social-privacy d-flex justify-content-md-end flex-wrap gap-lg-4 gap-3 align-items-center w-100 p-0 m-0">
-                <li>
-                  <a href="#">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#">FAQ's</a>
-                </li>
-                <li>
-                  <a href="#">Terms of Service</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </footer>
-        <!-- footer end code -->
+<!-- footer start code -->
+<footer class="border-top">
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center1">
+      <p class="footer-text-color text-xs mb-2 mb-md-0 font-medium text-center text-md-start">©2024. All rights reserved.</p>
+    </div>
+    <div class="col-md-6 text-center">
+      <ul class="social-privacy d-flex justify-content-center justify-content-md-end flex-wrap gap-lg-4 gap-3 align-items-center w-100 p-0 m-0">
+        <li>
+          <a href="#" class="footer-text-color text-xs font-medium">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="footer-text-color text-xs font-medium">FAQ's</a>
+        </li>
+        <li>
+          <a href="#" class="footer-text-color text-xs font-medium">Terms of Service</a> 
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<!-- footer end code -->
       </section>
       <!-- right-section-wrapper end code -->
     </div>
