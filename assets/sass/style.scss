@@ -531,6 +531,11 @@ body {
           color: $tertiary-color;
           position: relative;
           padding: 0px;
+          &.no-border {
+            &::before{
+              content: unset;
+            }
+          }
           @media (max-width: 1200px) {
             padding: 5px;
             &.dropdown-toggle {
@@ -561,7 +566,7 @@ body {
             }
           }
         }
-        @media (max-width: 575px) {
+        @media (max-width: 767px) {
          width: 100%;   
         }
       }
@@ -801,7 +806,7 @@ textarea{
       tr {
         // border-left: 1px solid $white;
         // border-right: 1px solid $white;
-        border-top: 1px solid #e5e5e5;
+        // border-top: 1px solid #e5e5e5;
 
         th {
           font-size: $text-sm;
@@ -810,7 +815,7 @@ textarea{
           background-color: #FAF9F9;
 
           padding: 8.5px 12px;
-          min-height: 40px;
+          height: 40px;
           text-wrap: nowrap;
           // min-width: 150px;
           vertical-align: middle;
@@ -924,6 +929,11 @@ textarea{
 }
 
 .table-layout-one {
+  border: 1px solid $border-color;
+  border-left: none;
+  border-right: none;
+  border-radius: 10px;
+  overflow: hidden;
   .table-responsive {
     @media (min-width:768px) {
       max-height: calc(100vh - 265px);
@@ -1034,7 +1044,6 @@ footer {
             border-right: solid 1px $stroke-color;
             border-radius: 0px;
             position: relative;
-            transition: 1s all;
 
             &::after {
               content: "";
@@ -1518,6 +1527,12 @@ table {
   thead {
     tr {
       th {
+        &:first-child {
+          border-top-left-radius: 10px;
+        }
+        &:last-child {
+          border-top-right-radius: 10px;
+        }
         &.select-input-th {
           min-width: 200px;
           max-width: 200px;

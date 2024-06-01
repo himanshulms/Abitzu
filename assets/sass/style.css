@@ -410,6 +410,9 @@ body {
   position: relative;
   padding: 0px;
 }
+.top-header .navbar .navbar-nav .nav-item .nav-link.no-border::before {
+  content: unset;
+}
 @media (max-width: 1200px) {
   .top-header .navbar .navbar-nav .nav-item .nav-link {
     padding: 5px;
@@ -442,7 +445,7 @@ body {
 .top-header .navbar .navbar-nav .nav-item .nav-link:hover::before {
   width: 100%;
 }
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .top-header .navbar .navbar-nav .nav-item {
     width: 100%;
   }
@@ -644,16 +647,13 @@ textarea.form-control {
 .table-layout-one table {
   margin-bottom: 0;
 }
-.table-layout-one table thead tr {
-  border-top: 1px solid #e5e5e5;
-}
 .table-layout-one table thead tr th {
   font-size: 0.875rem;
   font-weight: 500;
   color: #2d3748;
   background-color: #FAF9F9;
   padding: 8.5px 12px;
-  min-height: 40px;
+  height: 40px;
   text-wrap: nowrap;
   vertical-align: middle;
   position: sticky;
@@ -738,6 +738,13 @@ textarea.form-control {
   }
 }
 
+.table-layout-one {
+  border: 1px solid #E5E5E5;
+  border-left: none;
+  border-right: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
 .table-layout-one .table-responsive {
   overflow: auto;
   /* width */
@@ -832,7 +839,6 @@ footer {
   border-right: solid 1px #e7e7e7;
   border-radius: 0px;
   position: relative;
-  transition: 1s all;
 }
 .create-tab-ui ul.nav.nav-pills li button::after {
   content: "";
@@ -1295,6 +1301,12 @@ footer {
 }
 
 /**********Select with search input in table th*********/
+table thead tr th:first-child {
+  border-top-left-radius: 10px;
+}
+table thead tr th:last-child {
+  border-top-right-radius: 10px;
+}
 table thead tr th.select-input-th {
   min-width: 200px;
   max-width: 200px;
