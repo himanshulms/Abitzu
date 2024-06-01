@@ -275,15 +275,29 @@ body {
   position: relative;
   transition: background 1s;
 }
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+  opacity: 0.3;
+  border-radius: 10px;
+}
+.btn:hover::before {
+  width: 100%;
+}
 .btn.btnPrimary {
   background-color: #50cec3;
   border: solid 1px #50cec3;
   color: #ffffff;
 }
 .btn.btnPrimary::before {
-  background-color: #2d3748;
+  background-color: #1e988d;
 }
-.btn.btnPrimary.active, .btn.btnPrimary:active {
+.btn.btnPrimary:active {
   border: solid 1px #1e988d;
 }
 .btn.btnSecondary {
@@ -291,14 +305,11 @@ body {
   border: solid 1px #4e5662;
   color: #ffffff;
 }
-.btn.btnSecondary:hover {
+.btn.btnSecondary::before {
   background-color: #2d3748;
-  border: solid 1px #2d3748;
 }
 .btn.btnSecondary:active {
-  background-color: #2d3748;
   border: solid 1px #2d3748;
-  color: #ffffff;
 }
 .btn.btnSmall {
   padding: 3px 6px;
@@ -343,9 +354,6 @@ body {
 }
 .btn:focus {
   box-shadow: none;
-}
-.btn.no-hover:hover::before, .btn.no-hover:hover::after {
-  content: unset;
 }
 
 .badge {
@@ -1332,7 +1340,8 @@ table thead tr th .select-input .btn {
   border-color: transparent;
   padding-left: 0;
 }
-table thead tr th .select-input .btn:hover::before, table thead tr th .select-input .btn:hover::after {
+table thead tr th .select-input .btn:hover::before,
+table thead tr th .select-input .btn:hover::after {
   opacity: 0;
   border: none;
 }
@@ -1342,7 +1351,8 @@ table thead tr th .select-input .dropdown-menu.show {
   margin-top: 7px !important;
   padding: 0;
 }
-table thead tr th .bootstrap-select .dropdown-toggle:focus, table thead tr th .bootstrap-select select.mobile-device:focus + .dropdown-toggle {
+table thead tr th .bootstrap-select .dropdown-toggle:focus,
+table thead tr th .bootstrap-select select.mobile-device:focus + .dropdown-toggle {
   outline: unset !important;
   background-color: transparent;
   border-color: transparent;
@@ -1351,7 +1361,8 @@ table thead tr th .bootstrap-select .dropdown-menu li {
   border-bottom: 1px solid #e7e7e7;
   padding: 2px;
 }
-table thead tr th .bootstrap-select .dropdown-menu li .dropdown-item.active, table thead tr th .bootstrap-select .dropdown-menu li .dropdown-item:active {
+table thead tr th .bootstrap-select .dropdown-menu li .dropdown-item.active,
+table thead tr th .bootstrap-select .dropdown-menu li .dropdown-item:active {
   background-color: transparent;
 }
 table thead tr th .bootstrap-select .dropdown-menu .bs-searchbox {
@@ -1416,7 +1427,8 @@ button.navbar-toggler {
 }
 
 @media (max-width: 575px) {
-  .mobile-btns .btnPrimary, .mobile-btns .btnSecondary {
+  .mobile-btns .btnPrimary,
+  .mobile-btns .btnSecondary {
     width: 100%;
     display: block;
   }
