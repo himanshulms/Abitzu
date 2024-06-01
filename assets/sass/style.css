@@ -515,6 +515,12 @@ body {
   }
 }
 
+.min-max-width-195 {
+  min-width: 195px;
+  max-width: 195px;
+  width: 195px;
+}
+
 .min-width-150 {
   min-width: 150px;
 }
@@ -676,11 +682,21 @@ textarea.form-control {
   position: sticky;
   z-index: 9;
 }
+@media (max-width: 767px) {
+  .table-layout-one table thead tr th.sticky-col {
+    position: static;
+  }
+}
 .table-layout-one table thead tr th.first-col {
   width: 150px;
   min-width: 150px;
   max-width: 150px;
   left: 0px;
+}
+@media (max-width: 767px) {
+  .table-layout-one table thead tr th.first-col {
+    position: relative;
+  }
 }
 .table-layout-one table tbody tr:last-child td {
   border-bottom: 0px;
@@ -699,11 +715,21 @@ textarea.form-control {
   position: sticky;
   z-index: 8;
 }
+@media (max-width: 767px) {
+  .table-layout-one table tbody tr td.sticky-col {
+    position: static;
+  }
+}
 .table-layout-one table tbody tr td.first-col {
   width: 150px;
   min-width: 150px;
   max-width: 150px;
   left: 0px;
+}
+@media (max-width: 767px) {
+  .table-layout-one table tbody tr td.first-col {
+    position: relative;
+  }
 }
 
 .checkbox-input {
@@ -930,6 +956,16 @@ footer {
   .create-tab-ui ul.nav.nav-pills li:last-child button {
     border-right: solid 1px #e7e7e7;
   }
+}
+.create-tab-ui.tab2 .tab2-inner {
+  min-height: calc(100vh - 380px);
+  max-height: calc(100vh - 380px);
+  overflow: auto;
+  border-radius: 0 0 10px 10px;
+}
+.create-tab-ui.tab2 .tab2-inner .table-layout-one .table-responsive {
+  max-height: -moz-max-content;
+  max-height: max-content;
 }
 .create-tab-ui.tab2 ul.nav.nav-pills {
   border: none;
@@ -1424,6 +1460,11 @@ table thead tr th .bootstrap-select .dropdown-menu .bs-searchbox .form-control {
 /***************Button hover animation**************/
 button.navbar-toggler {
   border: solid 1px #e7e7e7;
+}
+
+/*********Box shadow for btn********/
+.btn-check:checked + .btn:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible, .btn:first-child:active:focus-visible, :not(.btn-check) + .btn:active:focus-visible {
+  box-shadow: unset;
 }
 
 @media (max-width: 575px) {

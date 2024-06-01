@@ -679,6 +679,12 @@ body {
     min-width: 270px;
   }
 }
+.min-max-width-195 {
+  min-width: 195px;
+  max-width: 195px;
+  width: 195px;
+
+}
 
 .min-width-150 {
   min-width: 150px;
@@ -888,6 +894,9 @@ textarea {
             position: -webkit-sticky;
             position: sticky;
             z-index: 9;
+            @media (max-width: 767px) {
+              position: static;
+            }
           }
 
           &.first-col {
@@ -895,6 +904,9 @@ textarea {
             min-width: 150px;
             max-width: 150px;
             left: 0px;
+            @media (max-width: 767px) {
+              position: relative;
+            }
           }
         }
       }
@@ -927,6 +939,9 @@ textarea {
             position: -webkit-sticky;
             position: sticky;
             z-index: 8;
+            @media (max-width: 767px) {
+              position: static;
+            }
           }
 
           &.first-col {
@@ -934,6 +949,9 @@ textarea {
             min-width: 150px;
             max-width: 150px;
             left: 0px;
+            @media (max-width: 767px) {
+              position: relative;
+            }
           }
         }
       }
@@ -1208,6 +1226,17 @@ footer {
   }
 
   &.tab2 {
+    .tab2-inner {
+      min-height: calc(100vh - 380px);
+      max-height: calc(100vh - 380px);
+      overflow: auto;
+      border-radius: 0 0 10px 10px;
+      .table-layout-one {
+        .table-responsive {
+          max-height: max-content;
+        }
+      }
+    }
     ul {
       &.nav {
         &.nav-pills {
@@ -1827,6 +1856,10 @@ table {
 /***************Button hover animation**************/
 button.navbar-toggler {
   border: solid 1px $stroke-color;
+}
+/*********Box shadow for btn********/
+.btn-check:checked+.btn:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible, .btn:first-child:active:focus-visible, :not(.btn-check)+.btn:active:focus-visible {
+  box-shadow: unset;
 }
 
 .mobile-btns {
