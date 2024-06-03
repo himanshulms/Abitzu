@@ -482,7 +482,7 @@ body {
 }
 .dropdown .dropdown-menu .dropdown-item {
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #2d3748;
 }
 .dropdown .dropdown-menu::before {
@@ -1491,4 +1491,15 @@ button.navbar-toggler {
 
 .br-bottom-10 {
   border-radius: 0 0 10px 10px;
+}
+
+/*********Dropdodwn common***********/
+ul.dropdown-menu {
+  padding: 0;
+}
+ul.dropdown-menu li {
+  border-bottom: 1px solid #e7e7e7;
+}
+ul.dropdown-menu li a {
+  padding: 9px 16px;
 }/*# sourceMappingURL=style.css.map */

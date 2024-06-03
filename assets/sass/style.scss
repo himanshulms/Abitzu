@@ -645,7 +645,7 @@ body {
 
     .dropdown-item {
       font-size: $text-sm;
-      font-weight: $font-medium;
+      font-weight: $font-normal;
       color: $tertiary-color;
     }
 
@@ -1885,7 +1885,6 @@ button.navbar-toggler {
 }
 
 /**************Border-radius***********/
-
 .br-10 {
   border-radius: 10px !important;
 }
@@ -1894,4 +1893,14 @@ button.navbar-toggler {
 }
 .br-bottom-10 {
   border-radius: 0 0 10px 10px;
+}
+/*********Dropdodwn common***********/
+ul.dropdown-menu {
+  padding: 0;
+  li {
+    border-bottom: 1px solid $stroke-color;
+    a {
+      padding: 9px 16px;
+    }
+  }
 }
