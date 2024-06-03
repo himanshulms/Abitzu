@@ -196,10 +196,6 @@ body {
   line-height: 1;
 }
 
-.br-10 {
-  border-radius: 10px !important;
-}
-
 .font-thin {
   font-weight: 100;
 }
@@ -1473,4 +1469,17 @@ button.navbar-toggler {
     width: 100%;
     display: block;
   }
+}
+
+/**************Border-radius***********/
+.br-10 {
+  border-radius: 10px !important;
+}
+
+.br-top-10 {
+  border-radius: 10px 10px 0 0;
+}
+
+.br-bottom-10 {
+  border-radius: 0 0 10px 10px;
 }/*# sourceMappingURL=style.css.map */
