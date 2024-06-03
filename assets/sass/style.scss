@@ -1227,9 +1227,23 @@ footer {
       max-height: calc(100vh - 380px);
       overflow: auto;
       border-radius: 0 0 10px 10px;
+      
       .table-layout-one {
+        border-radius: 0 0 10px 10px;
         .table-responsive {
-          max-height: max-content;
+          max-height: max-content;background:red;
+          table {
+            tr {
+              th {
+                &:first-child {
+                  border-top-left-radius: 0;
+                }
+                &:last-child {
+                  border-top-right-radius: 0;
+                }
+              }
+            }
+          }
         }
       }
     }
