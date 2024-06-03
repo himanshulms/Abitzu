@@ -959,9 +959,19 @@ footer {
   overflow: auto;
   border-radius: 0 0 10px 10px;
 }
+.create-tab-ui.tab2 .tab2-inner .table-layout-one {
+  border-radius: 0 0 10px 10px;
+}
 .create-tab-ui.tab2 .tab2-inner .table-layout-one .table-responsive {
   max-height: -moz-max-content;
   max-height: max-content;
+  background: red;
+}
+.create-tab-ui.tab2 .tab2-inner .table-layout-one .table-responsive table tr th:first-child {
+  border-top-left-radius: 0;
+}
+.create-tab-ui.tab2 .tab2-inner .table-layout-one .table-responsive table tr th:last-child {
+  border-top-right-radius: 0;
 }
 .create-tab-ui.tab2 ul.nav.nav-pills {
   border: none;
