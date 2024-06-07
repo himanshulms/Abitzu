@@ -29,3 +29,7 @@ if (toastTrigger) {
     toastBootstrap.show()
   })
 }
+/***********Tooltip************/
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
