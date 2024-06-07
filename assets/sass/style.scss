@@ -399,29 +399,32 @@ body {
     transition: all 1s;
     opacity: 0.3;
     border-radius: 10px;
+    span {
+      position: relative;
+      z-index: 9;
+    }
   }
   &:hover{
     &::before{
       width: 100%;
+      span {
+        position: relative;
+        z-index: 9;
+      }
     }
   }
   
-
   &.btnPrimary {
     background-color: $secondary-color;
     border: solid 1px $secondary-color;
     color: $white;
-    &::before{
-      background-color: $button-hover-primary;
+    &:active {
+      border-color: $button-hover-primary !important;
+      background: $button-hover-primary !important;
     }
-    // &:hover {
-    //   background-color: $button-hover-primary;
-    //   border: solid 1px $button-hover-primary;
-    // }
-    &:active{
-    //   background-color: $button-hover-primary;
-      border: solid 1px $button-hover-primary;
-    //   color: $white;
+    &::before {
+      border-color: $button-hover-primary !important;
+      background-color: $button-hover-primary;
     }
   }
 
@@ -429,17 +432,8 @@ body {
     background-color: $button-color;
     border: solid 1px $button-color;
     color: $white;
-    &::before{
+    &::before, &:active {
       background-color: $tertiary-color;
-    }
-    // &:hover {
-    //   background-color: $tertiary-color;
-    //   border: solid 1px $tertiary-color;
-    // }
-    &:active{
-    //   background-color: $tertiary-color;
-      border: solid 1px $tertiary-color;
-    //   color: $white;
     }
   }
 
@@ -488,14 +482,6 @@ body {
   &:focus {
     box-shadow: none;
   }
-
-  // &.no-hover {
-  //   &:hover {
-  //     &::before, &::after {
-  //       content: unset;
-  //     }
-  //   }
-  // }
 
 }
 
@@ -693,6 +679,9 @@ body {
 .gap-12 {
   gap: 12px;
 }
+.gap-10 {
+  gap: 10px;
+}
 
 aside {
   // @media (min-width:768px) {
@@ -723,7 +712,7 @@ aside {
               line-height: initial;
               padding: 12px;
               gap: 12px;
-              margin: 6px 12px;
+              margin: 0 12px 2px 12px;
 
               span {
                 &.user-icons {
@@ -735,12 +724,21 @@ aside {
                   display: flex;
                   align-items: center;
                   justify-content: center;
+                  
                 }
               }
 
               &.actives {
                 background-color: white;
                 color: $tertiary-color;
+                box-shadow: 0px 3.5px 5.5px 0px #00000005;
+
+                span {
+                  background-color: $secondary-color;
+                  img {
+                    filter: brightness(0) invert(1);
+                  }
+                }
               }
             }
           }
@@ -749,6 +747,14 @@ aside {
             a.nav-link {
               background-color: white;
               color: $tertiary-color;
+              box-shadow: 0px 3.5px 5.5px 0px #00000005;
+
+              span {
+                  background-color: $secondary-color;
+                  img {
+                    filter: brightness(0) invert(1);
+                  }
+                }
             }
           }
         }
@@ -926,7 +932,7 @@ textarea {
           font-weight: $font-medium;
           color: $tertiary-color;
           padding: 5px 12px;
-          min-height: 40px;
+          line-height: 29px;
           vertical-align: middle;
           text-wrap: nowrap;
 
@@ -1007,6 +1013,18 @@ textarea {
   border-right: none;
   border-radius: 10px;
   overflow: hidden;
+  &.no-radius {
+    border-radius: 0;
+    table {
+      thead {
+        tr {
+          th:first-child, th:last-child {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
   .table-responsive {
     @media (min-width:768px) {
       max-height: calc(100vh - 265px);
@@ -1044,6 +1062,9 @@ ul {
         font-weight: $font-medium;
         color: $footer-text-color;
         text-decoration: none;
+        &:hover {
+          color: $tertiary-color;
+        }
 
         &:after {
           content: "";
@@ -1220,11 +1241,36 @@ footer {
       }
     }
   }
+  .tab-content {
+    .scroll {
+      min-height: calc(100vh - 430px);
+      max-height: calc(100vh - 430px);
+      overflow: auto;
+    }
+    // .scroll-height {
+    //   min-height: calc(100vh - 290px);
+    //   max-height: calc(100vh - 290px);
+    // }
+    .table {
+      &.table-input-text {
+        td {
+          .td-inputs {
+          input.form-control {
+            border-radius: 4px 4px 0 0 !important;
+            height: 27px;
+    border: none !important;
+    border-bottom: 1px solid $stroke-color !important;
+          }
+        }
+      }
+      }
+    }
+  }
 
   &.tab2 {
     .tab2-inner {
-      min-height: calc(100vh - 380px);
-      max-height: calc(100vh - 380px);
+      min-height: calc(100vh - 387px);
+      max-height: calc(100vh - 387px);
       overflow: auto;
       border-radius: 0 0 10px 10px;
       
@@ -1329,19 +1375,6 @@ footer {
   }
 }
 
-
-// view package start
-
-.packages-deails {
-  .package-detail {
-    width: calc(33.33% - 16px);
-
-    @media (max-width:768px) {
-      width: 100%;
-    }
-  }
-}
-
 // view package end
 
 .accordion {
@@ -1375,7 +1408,7 @@ footer {
         background: $white;
         box-shadow: none;
         line-height: 20px;
-        padding: 10px 16px !important;
+        padding: 12px 16px !important;
         padding-right: 50px !important;
 
         &::after {
@@ -1393,12 +1426,17 @@ footer {
         padding: 12px 0 0;
 
         .sub-accordion {
+          &.accordion {
+            padding: 0 16px;
+            .accordion-header {
+              border-radius: 10px 10px 0 0;
+            }}
           .accordion-item {
             .accordion-header {
               .accordion-button {
-                padding: 10px 24px !important;
+                padding: 10px 16px !important;
                 padding-right: 60px !important;
-
+                border-radius: 0px;
                 &::after {
                   right: 24px;
                 }
@@ -1783,6 +1821,7 @@ table {
               .dropdown-item.active,
               .dropdown-item:active {
                 background-color: transparent;
+                padding:7px 16px;
               }
             }
 
@@ -1858,7 +1897,7 @@ table {
 
 .custom-dropdown {
   .dropdown-menu.show {
-    margin-top: 16px !important;
+    margin-top: 8px !important;
     padding: 0;
   }
 }
@@ -1869,7 +1908,11 @@ button.navbar-toggler {
 }
 /*********Box shadow for btn********/
 .btn-check:checked+.btn:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible, .btn:first-child:active:focus-visible, :not(.btn-check)+.btn:active:focus-visible {
-  box-shadow: unset;
+  box-shadow: unset;outline: none;
+}
+.btn:first-child:active {
+  background-color: $tertiary-color;
+  color: $white;
 }
 
 .mobile-btns {
@@ -1896,11 +1939,30 @@ button.navbar-toggler {
 }
 /*********Dropdodwn common***********/
 ul.dropdown-menu {
+  overflow: hidden;
   padding: 0;
   li {
     border-bottom: 1px solid $stroke-color;
+    &:last-child {
+      border:0;
+    }
     a {
-      padding: 9px 16px;
+      padding: 8px 16px;
+      font-size: 0.875rem;
     }
   }
+}
+.btn {
+    span {
+        position: relative;
+        z-index: 9;color: $white;    
+    }
+  }
+.min-width-120 {
+  min-width: 120px;
+  max-width: 120px;
+}
+.min-width-80 {
+  min-width: 80px;
+  max-width: 80px;
 }

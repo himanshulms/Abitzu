@@ -282,30 +282,37 @@ body {
   opacity: 0.3;
   border-radius: 10px;
 }
+.btn::before span {
+  position: relative;
+  z-index: 9;
+}
 .btn:hover::before {
   width: 100%;
+}
+.btn:hover::before span {
+  position: relative;
+  z-index: 9;
 }
 .btn.btnPrimary {
   background-color: #50cec3;
   border: solid 1px #50cec3;
   color: #ffffff;
 }
-.btn.btnPrimary::before {
-  background-color: #1e988d;
-}
 .btn.btnPrimary:active {
-  border: solid 1px #1e988d;
+  border-color: #1e988d !important;
+  background: #1e988d !important;
+}
+.btn.btnPrimary::before {
+  border-color: #1e988d !important;
+  background-color: #1e988d;
 }
 .btn.btnSecondary {
   background-color: #4e5662;
   border: solid 1px #4e5662;
   color: #ffffff;
 }
-.btn.btnSecondary::before {
+.btn.btnSecondary::before, .btn.btnSecondary:active {
   background-color: #2d3748;
-}
-.btn.btnSecondary:active {
-  border: solid 1px #2d3748;
 }
 .btn.btnSmall {
   padding: 3px 6px;
@@ -529,6 +536,10 @@ body {
   gap: 12px;
 }
 
+.gap-10 {
+  gap: 10px;
+}
+
 aside {
   overflow: auto;
   /* width */
@@ -545,7 +556,7 @@ aside ul.nav-pills li.nav-item a.nav-link {
   line-height: initial;
   padding: 12px;
   gap: 12px;
-  margin: 6px 12px;
+  margin: 0 12px 2px 12px;
 }
 aside ul.nav-pills li.nav-item a.nav-link span.user-icons {
   background-color: white;
@@ -560,10 +571,24 @@ aside ul.nav-pills li.nav-item a.nav-link span.user-icons {
 aside ul.nav-pills li.nav-item a.nav-link.actives {
   background-color: white;
   color: #2d3748;
+  box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.0196078431);
+}
+aside ul.nav-pills li.nav-item a.nav-link.actives span {
+  background-color: #50cec3;
+}
+aside ul.nav-pills li.nav-item a.nav-link.actives span img {
+  filter: brightness(0) invert(1);
 }
 aside ul.nav-pills li.nav-item:hover a.nav-link {
   background-color: white;
   color: #2d3748;
+  box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.0196078431);
+}
+aside ul.nav-pills li.nav-item:hover a.nav-link span {
+  background-color: #50cec3;
+}
+aside ul.nav-pills li.nav-item:hover a.nav-link span img {
+  filter: brightness(0) invert(1);
 }
 
 .search-input {
@@ -703,7 +728,7 @@ textarea.form-control {
   font-weight: 500;
   color: #2d3748;
   padding: 5px 12px;
-  min-height: 40px;
+  line-height: 29px;
   vertical-align: middle;
   text-wrap: nowrap;
 }
@@ -775,6 +800,12 @@ textarea.form-control {
   border-radius: 10px;
   overflow: hidden;
 }
+.table-layout-one.no-radius {
+  border-radius: 0;
+}
+.table-layout-one.no-radius table thead tr th:first-child, .table-layout-one.no-radius table thead tr th:last-child {
+  border-radius: 0;
+}
 .table-layout-one .table-responsive {
   overflow: auto;
   /* width */
@@ -807,6 +838,9 @@ ul.social-privacy li a {
   font-weight: 500;
   color: #abb7c2;
   text-decoration: none;
+}
+ul.social-privacy li a:hover {
+  color: #2d3748;
 }
 ul.social-privacy li a:after {
   content: "";
@@ -953,9 +987,20 @@ footer {
     border-right: solid 1px #e7e7e7;
   }
 }
+.create-tab-ui .tab-content .scroll {
+  min-height: calc(100vh - 430px);
+  max-height: calc(100vh - 430px);
+  overflow: auto;
+}
+.create-tab-ui .tab-content .table.table-input-text td .td-inputs input.form-control {
+  border-radius: 4px 4px 0 0 !important;
+  height: 27px;
+  border: none !important;
+  border-bottom: 1px solid #e7e7e7 !important;
+}
 .create-tab-ui.tab2 .tab2-inner {
-  min-height: calc(100vh - 380px);
-  max-height: calc(100vh - 380px);
+  min-height: calc(100vh - 387px);
+  max-height: calc(100vh - 387px);
   overflow: auto;
   border-radius: 0 0 10px 10px;
 }
@@ -1035,15 +1080,6 @@ footer {
   text-align: left;
 }
 
-.packages-deails .package-detail {
-  width: calc(33.33% - 16px);
-}
-@media (max-width: 768px) {
-  .packages-deails .package-detail {
-    width: 100%;
-  }
-}
-
 .accordion .accordion-item {
   margin-bottom: 16px;
   border-radius: 10px;
@@ -1071,7 +1107,7 @@ footer {
   background: #ffffff;
   box-shadow: none;
   line-height: 20px;
-  padding: 10px 16px !important;
+  padding: 12px 16px !important;
   padding-right: 50px !important;
 }
 .accordion .accordion-item .accordion-header .accordion-button::after {
@@ -1084,9 +1120,16 @@ footer {
 .accordion .accordion-item .accordion-collapse .accordion-body {
   padding: 12px 0 0;
 }
+.accordion .accordion-item .accordion-collapse .accordion-body .sub-accordion.accordion {
+  padding: 0 16px;
+}
+.accordion .accordion-item .accordion-collapse .accordion-body .sub-accordion.accordion .accordion-header {
+  border-radius: 10px 10px 0 0;
+}
 .accordion .accordion-item .accordion-collapse .accordion-body .sub-accordion .accordion-item .accordion-header .accordion-button {
-  padding: 10px 24px !important;
+  padding: 10px 16px !important;
   padding-right: 60px !important;
+  border-radius: 0px;
 }
 .accordion .accordion-item .accordion-collapse .accordion-body .sub-accordion .accordion-item .accordion-header .accordion-button::after {
   right: 24px;
@@ -1405,6 +1448,7 @@ table thead tr th .bootstrap-select .dropdown-menu li {
 table thead tr th .bootstrap-select .dropdown-menu li .dropdown-item.active,
 table thead tr th .bootstrap-select .dropdown-menu li .dropdown-item:active {
   background-color: transparent;
+  padding: 7px 16px;
 }
 table thead tr th .bootstrap-select .dropdown-menu .bs-searchbox {
   padding: 0;
@@ -1458,7 +1502,7 @@ table thead tr th .bootstrap-select .dropdown-menu .bs-searchbox .form-control {
 }
 
 .custom-dropdown .dropdown-menu.show {
-  margin-top: 16px !important;
+  margin-top: 8px !important;
   padding: 0;
 }
 
@@ -1470,6 +1514,12 @@ button.navbar-toggler {
 /*********Box shadow for btn********/
 .btn-check:checked + .btn:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible, .btn:first-child:active:focus-visible, :not(.btn-check) + .btn:active:focus-visible {
   box-shadow: unset;
+  outline: none;
+}
+
+.btn:first-child:active {
+  background-color: #2d3748;
+  color: #ffffff;
 }
 
 @media (max-width: 575px) {
@@ -1495,11 +1545,32 @@ button.navbar-toggler {
 
 /*********Dropdodwn common***********/
 ul.dropdown-menu {
+  overflow: hidden;
   padding: 0;
 }
 ul.dropdown-menu li {
   border-bottom: 1px solid #e7e7e7;
 }
+ul.dropdown-menu li:last-child {
+  border: 0;
+}
 ul.dropdown-menu li a {
-  padding: 9px 16px;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+}
+
+.btn span {
+  position: relative;
+  z-index: 9;
+  color: #ffffff;
+}
+
+.min-width-120 {
+  min-width: 120px;
+  max-width: 120px;
+}
+
+.min-width-80 {
+  min-width: 80px;
+  max-width: 80px;
 }/*# sourceMappingURL=style.css.map */
