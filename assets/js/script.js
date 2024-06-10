@@ -33,3 +33,14 @@ if (toastTrigger) {
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
+/**************Header background changes on scroll**********/
+$(function() {
+  $(window).on("scroll", function() {
+      if($(window).scrollTop() > 50) {
+          $(".header-wrap").addClass("header-active");
+      } else {
+          //remove the background property so it comes transparent again (defined in your css)
+         $(".header-wrap").removeClass("header-active");
+      }
+  });
+});
