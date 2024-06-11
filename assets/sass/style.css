@@ -401,12 +401,13 @@ body {
 @media (max-width: 1199px) {
   .navbar-collapse {
     position: relative;
-    top: 60px;
+    top: 0;
     background: rgba(0, 0, 0, 0.8);
     width: 100%;
     left: 0;
     right: 0;
     border-radius: 10px;
+    height: 100vh;
   }
   .navbar-collapse .navbar-nav {
     padding: 0 15px;
@@ -614,7 +615,7 @@ aside ul.nav-pills li.nav-item:hover a.nav-link span img {
 .search-input {
   max-width: 302px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .search-input {
     max-width: 100%;
   }
@@ -1255,10 +1256,9 @@ footer {
 .banner-bg.home .header-wrap {
   z-index: 9;
 }
-@media (max-width: 992px) {
+@media (max-width: 1199px) {
   .banner-bg.home .header-wrap {
-    position: fixed;
-    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
   }
 }
 .banner-bg.appointment-main {
@@ -1693,4 +1693,11 @@ ul.dropdown-menu li a {
 .min-width-80 {
   min-width: 80px;
   max-width: 80px;
+}
+
+.error {
+  font-size: 12px;
+  color: #c22525;
+  font-weight: 500;
+  margin-bottom: 4px;
 }/*# sourceMappingURL=style.css.map */
